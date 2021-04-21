@@ -63,7 +63,7 @@ app.get("/:shortened_URL", async (req, res) => {
 });
 
 //Start the server on the given port
-const port = 4000;
+const port = process.env.PORT;
 if (!port) {
   throw 'Missing PORT environment variable.  Set it in .env file.';
 }
